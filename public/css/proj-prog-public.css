@@ -1,0 +1,62 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+ :root {
+   --marker-size: 12px;
+ }
+
+ .progress-bar-wrap {
+   width: 100%;
+   min-width: 575px;
+   height: 50px;
+   position: relative;
+   margin: 2em 0;
+ }
+
+ .labels {
+   display: flex;
+   position: absolute;
+   list-style-type: none;
+   flex-direction: row;
+   justify-content: space-between;
+   width: 100%;
+   font-family: inherit;
+   text-align: center;
+   margin: 0;
+   padding: 0;
+ }
+
+ .labels li {
+   display: block;
+ }
+
+ .progress-bar, .empty-bar {
+     height: 5px;
+     border-radius: 3px;
+     position: absolute;
+     bottom: 0;
+ }
+
+ .progress-bar {
+   background-color: #3173AF;
+   transition: width 3s ease-out;
+   width: 0px;
+ }
+
+ .empty-bar {
+   background-color: #e2e2e2;
+   width: 200px;
+   z-index: -100;
+ }
+
+ .marker {
+   width: var(--marker-size);
+   height: var(--marker-size);
+   border-radius: 50%;
+   position: absolute;
+   background-color: #e2e2e2;
+   bottom: -3px;
+   transition: background-color 3s ease-out;
+ }
